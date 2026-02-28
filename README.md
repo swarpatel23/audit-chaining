@@ -75,14 +75,3 @@ Business-time corrections are implemented as “rewrite the current business sli
 - uses `SELECT ... FOR UPDATE` to lock the current rows for an account during bitemporal rewrites
 - rewrites business slices in memory (split → merge → validate), then inserts the next processing version
 
-## Notes / troubleshooting
-
-- **SLF4J “StaticLoggerBinder” warning during tests**: Reladomo test dependencies can run without a logging backend; the warning is typically harmless for this sample.
-- **Git push error `src refspec main does not match any`**: you likely haven’t created the first commit yet. Run:
-
-```bash
-git add .
-git commit -m "Initial commit"
-git push -u origin main
-```
-
