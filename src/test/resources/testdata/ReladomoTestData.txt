@@ -1,0 +1,5 @@
+class com.example.reladomo.domain.AuditAccount
+accountId, balance
+
+class com.example.reladomo.domain.BitemporalAccount
+accountId, balance

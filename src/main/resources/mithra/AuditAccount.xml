@@ -1,0 +1,16 @@
+<MithraObject objectType="transactional">
+  <PackageName>com.example.reladomo.domain</PackageName>
+  <ClassName>AuditAccount</ClassName>
+  <DefaultTable>AUDIT_ACCOUNT</DefaultTable>
+
+  <AsOfAttribute name="processingDate"
+                 fromColumnName="IN_Z"
+                 toColumnName="OUT_Z"
+                 infinityDate="[com.gs.fw.common.mithra.util.DefaultInfinityTimestamp.getDefaultInfinity()]"
+                 defaultIfNotSpecified="[com.gs.fw.common.mithra.util.DefaultInfinityTimestamp.getDefaultInfinity()]"
+                 toIsInclusive="false"
+                 isProcessingDate="true"/>
+
+  <Attribute name="accountId" javaType="int" columnName="ACCOUNT_ID" primaryKey="true"/>
+  <Attribute name="balance" javaType="double" columnName="BALANCE"/>
+</MithraObject>
